@@ -12,7 +12,6 @@
     </form>
 </div>
 
-<!--5 поработать над этим-->
 <i>Список сообщений:</i>
 <form method="get" action="/topics/${topics.id}/messages">
     <input type="text" name="filter2" value="${filter3?ifExists}" placeholder="Поиск по тэгу"/>
