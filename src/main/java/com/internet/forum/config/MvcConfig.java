@@ -28,11 +28,11 @@ public class MvcConfig implements WebMvcConfigurer {
 
 
 
-        registry.addResourceHandler("/images/**") // все запросы по этой маске будут перенаправляться по пути
+        registry.addResourceHandler("/images/**") 
                 .addResourceLocations("file://"+uploadPath+"/");
 
         registry.addResourceHandler("/static/**")
-                .addResourceLocations("classpath:/static/"); // при обращении при статик, ресурсы будут искаться в дереве проекта
+                .addResourceLocations("classpath:/static/"); 
 
     }
 }
