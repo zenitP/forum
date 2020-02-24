@@ -61,8 +61,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <scope>runtime</scope> <!--к классам драйвера нельзя обратиться напрямую.
-            Зависимость не нужна при компиляции и тестировании-->
+            <scope>runtime</scope> 
         </dependency>
 
         <!-- security -->
