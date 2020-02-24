@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true) // связана с @PreAuthorize("hasAuthority('ADMIN')")
+@EnableGlobalMethodSecurity(prePostEnabled = true) 
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
