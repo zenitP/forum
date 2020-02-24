@@ -10,16 +10,15 @@
     <div>
         <form method="post">
             <input type="text" name="name" placeholder="Тема"/>
-            <input type="hidden" name="_csrf" value="${_csrf.token}"/> <!-- только для post-запросов -->
+            <input type="hidden" name="_csrf" value="${_csrf.token}"/> 
             <button type="submit">Добавить тему</button>
         </form>
     </div>
 
-    <!--3 поработать над этим-->
     <i>Список тем для обсуждения (чувствительный к регистру)</i>
     <form method="get" action="/topics"> <!-- по имени @PostMapping("filter")-->
 
-        <input type="text" name="filter" value="${f}" placeholder="Поиск темы"/> <!-- поле name для @RequestParam, а "model"   /// f?ifExists равносильно в контроллере тому, что там default значение ="" -->
+        <input type="text" name="filter" value="${f}" placeholder="Поиск темы"/> 
         <button type="submit">Найти</button>
     </form>
 
