@@ -31,7 +31,7 @@ import java.util.UUID;
 public class MessageController {
 
     @Value("${upload.path}")
-    private String uploadPath; // ищет это проперти и вставляет в переменную
+    private String uploadPath; 
 
     @PersistenceContext
     private EntityManager em;
@@ -73,7 +73,7 @@ public class MessageController {
             Map<String, Object> model
     ) throws IOException {
 
-        //7через точку останова можно посмотреть текущие данные @AuthenticationPrincipal
+        
         Message message = new Message(text, tag, user, topics);
         String FullName = uploadPath;    // изображения по папкам +"/"+topics.getName();
 
@@ -88,7 +88,7 @@ public class MessageController {
             String uuidFile = UUID.randomUUID().toString();
             String resultFileName = uuidFile+"."+file.getOriginalFilename();
 
-            file.transferTo(new File(FullName+"/"+resultFileName)); // загрузка файла
+            file.transferTo(new File(FullName+"/"+resultFileName)); 
 
             message.setFilename(resultFileName);
         }
