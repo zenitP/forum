@@ -31,7 +31,7 @@ public class UserListController {
     }
 
     @GetMapping("{user}")
-    // без репозитория получаем пользователя из БД, а можно было сделать и Long user;
+    
     public String userEdit(@PathVariable User user, Model model){
 
         model.addAttribute("user", user);
